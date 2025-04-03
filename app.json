@@ -1,40 +1,34 @@
-
 {
-    "name": " 𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎",
-    "description": "Download videos from various websites using this Telegram bot.",
-    "logo": "https://tinypic.host/images/2025/02/07/DeWatermark.ai_1738952933236-1.png",
-    "keywords": [
-        "drm-video-dl",
-        "video-extract",
-        "pyrogram"
+    "name":"pyro",
+    "description":"Download videos from various websites using this telegram bot",
+    "repository":"https://github.com/adityasirji/AdityaTXTLeechBot",
+    "buildpacks":[
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        },
+        {
+            "url": "https://github.com/amivin/aria2-heroku.git"
+        },
+        {
+            "url": "heroku/python"
+        }
     ],
-    "repository": "https://github.com/nikhilsainiop/Masteruploader",
-    "success_url": "https://github.com/nikhilsainiop/Masteruploader",
-    "stack": "container",
     "env": {
-        "API_ID": {
-            "description": "Enter your Telegram API ID.",
-            "required": true
+        "API_ID":{
+            "description": "Get your telegram API ID from https://my.telegram.org",
+            "value":"23612641"
         },
-        "API_HASH": {
-            "description": "Enter your Telegram API Hash.",
-            "required": true
+        "API_HASH":{
+            "description":"Get your telegram API HASH from https://my.telegram.org",
+                    "value":"f7ef90c733241bdc2977e3fcc53df5b7"
         },
-        "BOT_TOKEN": {
-            "description": "Enter your Telegram Bot Token.",
-            "required": true
+        "BOT_TOKEN":{
+            "description":"Get from BotFather",
+            "value":"8126174019:AAHnlSyI4oA3k3qKTnTwRGU2q3ohECBOmUs"
         },
-        "AUTH_USERS": {
-            "description": "Enter your authorized user IDs, e.g., 6801378994,5919400080,...(Seprate by Comma) ",
-            "required": true
+        "AUTH_USERS":{
+            "description":"Admin/Owner/Friends ID Seperate by ','  Ex: 44578878,8878899",
+            "value":"7769588492"
         }
-    },
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "standard-2x"
-        }
-    },
-    "addons": [],
-    "buildpacks": []
+    }
 }
